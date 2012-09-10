@@ -2,6 +2,27 @@
 <html>
 <body>
 <?php
+
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * @package   block-books
+ * @copyright 2012 Hina Yousuf
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 require_once('../../config.php');
 $user_id=$_GET['userid'];
 
@@ -28,10 +49,10 @@ echo '<table width="30%" border="1" align="center" cellspacing="3" cellpadding="
 //echo "<b>To </b>";
 //foreach($result as $row){
 
-	$_SESSION['bookid']=	$result->bookid;
-	$toemail=$result->email;
-	$id=	$result->userid;
-	//echo $id;
+$_SESSION['bookid']=	$result->bookid;
+$toemail=$result->email;
+$id=	$result->userid;
+//echo $id;
 //	echo "</td><td>";
 //	echo $toemail;
 //	echo "</td></tr>";
@@ -43,7 +64,7 @@ $result_email = $DB->get_record_sql($sql_usersemail);
 //echo "<b>From </b>";
 //foreach($result_email as $row)
 //{
-	$frmemail=$result_email->email;
+$frmemail=$result_email->email;
 //	echo "</td><td>";
 //	echo $frmemail;
 //	echo "</td></tr>";
@@ -58,15 +79,15 @@ if (isset($_POST['submitbuton'])) {
 	echo "Message has been sent";}
 	echo "<tr><td>";
 	echo '<form name="mForm" method="post" enctype="multipart/form-data" action="contact.php" onsubmit="return validateForm();">';
-//	echo '<b>Your Name </b>';
-//	echo "</td><td>";
-//	echo '<input type="text" name="yourname" />';
-//	echo "</td></tr>";
-//	echo "<tr><td>";
-//	echo '<b>Subject </b>';
-//	echo "</td><td>";
-//	echo '<input type="text" name="subject" /><br /><br />';
-//	echo "</td></tr>";
+	//	echo '<b>Your Name </b>';
+	//	echo "</td><td>";
+	//	echo '<input type="text" name="yourname" />';
+	//	echo "</td></tr>";
+	//	echo "<tr><td>";
+	//	echo '<b>Subject </b>';
+	//	echo "</td><td>";
+	//	echo '<input type="text" name="subject" /><br /><br />';
+	//	echo "</td></tr>";
 	//echo "<tr><td>";
 	echo '<b>Message </b>*</br></br>';
 	//echo "</td></tr>";
